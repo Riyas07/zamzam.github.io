@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/serchProCSS/serchPro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Search-Products</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="alog"><div class="log"><span class="w1">
+            <h1>    
+            Z
+            </h1>
+        </span>
+        <span class="w2">
+           <h1>
+               a
+           </h1>
+        </span>
+        <span class="w3">
+            <h1>
+                m
+            </h1>
+        </span>
+        <span class="w4">
+            <h1>
+                Z
+            </h1>
+        </span>
+        <span class="w5">
+           <h1>
+               a
+           </h1>
+        </span>
+        <span class="w6">
+            <h1>
+                m
+            </h1>
+        </span>
+    </div></a>
+        <ul>
+            <li><a href="/"><i class="fa fw-fa fa-home"></i>Back to Home</a></li>
+        </ul>
+    </nav>
+<br/><br/><br/><br/><br/>
+    <main>
+        <br/><br/><br/><br/>
+        <h4><b><u>Your Orders</u></b></h4>
+        <br/><br/>
+        <div th:each="s:${sam}"> 
+        <div th:each="up:${s.uProducts}">
+              <div class="pro-container">
+        <a th:href="@{/proview/{id}(id = ${up.id})}"> <img th:src="*{'data:image/jpeg;base64,'+{up.image}}"/></a>
+        <br/>
+        <a class="aproname" th:href="@{/proview/{id}(id = ${up.id})}"><p class="pr-name" th:text="${up.productname}"></p></a>
+   <label for="propri">Price : ₹  <span id="propri" class="pro-price" th:text="${up.price}">
+   </span></label>
+   <label for="sz">Size : <span id="sz" class="pro-size" th:text="${up.productsize}"></span></label>   
+              </div>
+            <br/>
+        </div>
+   </div>
+    </main>
+<script src="/serchProJS/serchPro.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/viewCSS/view.css">
+    <title>View</title>
+</head>
+<body>
+    <div class="container" th:each="ac:${select}">
+        <div class="card">
+            <img th:src="*{'data:image/jpeg;base64,'+{ac.image}}"/>
+        </div>
+        <div class="info">
+            <h2 class="dt1" th:text="${ac.productname}"></h2>
+            <br/><br/>
+            <h3 class="dt2" > <label for="comapanyname"> Manufactured by :  <span id="comapanyname" class="dt4" th:text="${ac.companyname}"></span></label></h3>
+            <h3 class="dt3"> <label for="size"> Size :  <span id="size" class="dt4" th:text="${ac.productsize}"></span></label></h3>
+          <h4> <label for="price"> Price : ₹ <span id="price" class="dt4" th:text="${ac.price}"></span></label></h4>
+        </div>
+        <br><br/>
+           <form th:action="@{/cart/{id}(id=${ac.id})}">
+                 <button class="btn1" type="submit">Add Cart</button>
+            </form>
+        <br/><br/><br/>
+        <form th:action="@{/buy/{id}(id = ${ac.id})}">
+            <button class="btn" type="submit">Buy</button>
+        </form>
+    </div>
+    <script src="/viewJS/view.js"></script>
+</body>
+</html>

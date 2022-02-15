@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/uploadProducts/uploadProducts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sell-Products</title>
+</head>
+<body>
+    <form action="uploads" method="POST" enctype="multipart/form-data"> 
+        
+        <b><p id="ran" th:text="${ran}"></p><lable for="ran">&#8593; Copy The Product ID</lable></b>
+         <div class="form1" id="f1">
+        <input type="text" name="id" id="productsName" autocomplete="off" required/>
+        <label class="label-name" for="productsName"><span class="content-name">Product ID</span></label>
+    </div>
+    <br/>
+
+    <div class="form1" id="f1">
+        <input type="text" name="productname" id="productsName" autocomplete="off" required/>
+        <label class="label-name" for="productsName"><span class="content-name">Product Name</span></label>
+    </div>
+    <br/>
+     <div class="form1" id="f2">
+        <input  type="text" name="productsize" id="productsize" autocomplete="off" required/>
+        <label class="label-name" for="productsize"><span class="content-name">Product Size</span></label>
+    </div>
+    <br/>
+    <div class="form1" id="f3">
+        <input  type="text" name="price" id="price" autocomplete="off" required/>
+        <label class="label-name" for="price"><span class="content-name">Price</span></label>
+    </div>
+    <br/>
+    <div class="form1" id="f4">
+        <input type="text" name="companyname" id="productsName" autocomplete="off" required/>
+        <label class="label-name" for="companyname"><span class="content-name">Company Name</span></label>
+    </div>
+    <br/>
+    <div class="form1" id="f5">
+        <input type="text" id="specification" name="specification" autocomplete="off" required/>
+        <label class="label-name" for="specification"><span class="content-name">Specification</span></label>
+    </div>
+    <br/>
+    <input type="file" name="image" class="ff" id="files" autocomplete="off" required>
+<label class="fl" for="files"><i class="fa fa-fw fa-cloud-upload"></i>Choose Image</label>
+<br/>
+<button class="btn"><i class="fa fw-fa fa-upload"></i> Upload</button>   
+   </form>
+    <br/>    
+</body>
+</html>

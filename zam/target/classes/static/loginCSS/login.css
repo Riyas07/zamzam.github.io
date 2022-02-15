@@ -1,0 +1,158 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ form
+{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ .from1 
+{
+ width: 50%;
+ height: 20%;
+ position: relative;
+ overflow: hidden;
+}
+ .lu
+{
+    position: absolute;
+    right: 50%;
+    color: red;
+   display: block;
+   visibility: hidden;
+}
+ .le
+{
+    position: absolute;
+    right: 50%;
+    color: red;
+    display: block;
+    visibility: hidden;
+}
+ .lp
+{
+    position: absolute;
+    right: 50%;
+    color: red;
+    display: block;
+    visibility: hidden;
+}
+.la
+{
+    position: absolute;
+    right: 50%;
+    color: red;
+    display: block;
+    visibility: hidden;
+}
+.lpin
+{
+    position: absolute;
+    right: 50%;
+    color: red;
+    display: block;
+    visibility: hidden;
+}
+form .from1 input
+{
+    width: 100%;
+    height: 100%;
+   border: none;
+   outline: none;
+    transform: translateY(36%);
+position: absolute;
+bottom: -1px;
+font-size:12px;
+}
+.from1 label
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+pointer-events: none;
+border-bottom: 2px solid forestgreen;
+transition: 0.5s all ease;
+}
+.from1 label::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: translateX(-100%);
+    border-bottom: 2px solid blue;
+    transition: 1s all ease;
+}
+ .content-name
+{
+    color: forestgreen;
+   position: absolute;
+   bottom: -1px;
+   font-family: monospace;
+   font-size: 18px;
+   letter-spacing: 1px;
+   transition: 0.5s all ease;
+}
+.from1 input:focus + label .content-name,.from1 input:valid+label .content-name{
+    transform: translateY(-180%);
+color: blue;
+}
+.from1 input:focus + label::after,.from1 input:valid + label::after
+{
+    transform: translateX(0%);
+}
+.btn
+{
+    padding: 0;
+    width: 15%;
+    height: 10%;
+    outline: none;
+    border: 1px solid #15f4ee;
+    border-radius: 100px;
+    color: #15f4ee;
+    background-color: forestgreen;
+    font-family: monospace;
+    font-size: 20px;
+    transition: 1.5s all ease;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 5px 50px 0 #15f4ee inset,0 5px 50px 0 #15f4ee,
+    0 5px 50px 0 #15f4ee inset,0 5px 50px 0 #15f4ee;
+color: #000;
+}
+.create 
+{
+    text-decoration: none;
+color: forestgreen;
+position: absolute;
+left: 30px;
+animation: crt 1s ease forwards 1s;
+}
+.create:hover
+{
+    color: blue;
+}
+@keyframes crt
+{
+    0%
+    {
+        transform: translateY(-200%);
+    }
+    50%
+    {
+        transform: translateY(200%);
+    }
+    100%{
+ transform: translateY(0%);
+    }
+}

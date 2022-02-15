@@ -1,0 +1,305 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(32,35,48);
+    overflow: hidden;
+}
+.navbar
+{
+    width: 100%;
+    height: 10vh;
+    background-color: azure;
+    box-shadow:rgb(180, 172, 172) 1px 2px 5px 1px;
+    display: flex;
+    justify-content: space-around;
+}
+.alog
+{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    width: 10%;
+}
+.log
+{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log span h1 
+{
+    letter-spacing: 1.5px;
+    font-family: monospace;
+    font-size: 30px;
+    color: rgb(32,35,48);;
+}
+.log .w1
+{
+    animation: logos 0.5s ease 0.3s;
+}
+.log .w1
+{
+    animation: logos 0.5s ease 0.3s;
+}
+.log .w2
+{
+    animation: logos 0.5s ease 0.6s;
+}
+.log .w3
+{
+    animation: logos 0.5s ease 0.9s;
+}
+.log .w4
+{
+    animation: logos 0.5s ease 1.2s;
+}
+.log .w5
+{
+    animation: logos 0.5s ease 1.5s;
+}
+.log .w6
+{
+    animation: logos 0.5s ease 1.8s;
+}
+.links
+{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 60%;
+}
+.links li{
+    list-style: none;
+}
+.links a
+{
+    text-decoration: none;
+    color: rgb(32,35,48);
+    font-family:monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition:  0.5s all ease;
+}
+.links li a:hover
+{
+    transform: scale(1.5);
+    transition: 0.5s all ease;
+    color: rgba(221, 44, 44, 0.815);
+}
+.burger{
+    display: none;
+}
+.burger div
+{
+    width: 25px;
+    height: 4px;
+    margin: 3px;
+    background-color: black;
+cursor: pointer;
+}
+.contact
+{
+     width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 70px;
+    background-color: #bdc3c7;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translateX(100%);
+animation: contact1 1s forwards ease 1s;
+box-shadow: 6px 4px 4px 1px #95a5a6;
+}
+.contact h1
+{
+color: #34495e;
+font-family: fantasy;
+transform: translateX(100%);
+animation: contact2 2s forwards ease 1s;
+}
+.contact2 
+{
+    width: 100%;
+    height: 70vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+transform: translateY(100%);
+animation: cd 1s forwards ease 2s;
+}
+.contact2 .c2
+{
+    width: 100%;
+    font-family: monospace;
+color: #34495e;
+font-size: 15px;
+transform: translateX(100%);
+animation: cd 1s forwards ease 2.5s;
+}
+.contact2 .c3
+{
+    width: 100%;
+    font-family: monospace;
+color: #34495e;
+font-size: 15px;
+transform: translateX(100%);
+animation: cd 1s forwards ease 3s;
+}
+.contact2 .c4
+{
+    width: 100%;
+    font-family: monospace;
+color: #34495e;
+font-size: 15px;
+transform: translateX(100%);
+animation: cd 1s forwards ease 3.5s;
+}
+@keyframes cd
+{
+    to
+    {
+        transform: translateY(0%);
+    }
+}
+@keyframes contact2
+{
+    to
+    {
+        transform: translateX(0%);
+    }
+}
+@keyframes contact1
+{
+    to
+    {
+        transform: translateX(0%);
+    }
+}
+@keyframes logos
+{
+    0%
+    {
+       transform: translateY(-50px);  
+    }
+    50%
+    {
+        transform: translateY(20px);
+    }
+    100%
+{
+    transform: translateY(0px);
+}
+}
+@media screen and (max-width:1024px)
+{
+    .log
+    {
+        width: 30%;
+    }
+  .links
+  {
+    width: 70%;
+  }
+}
+@media screen and (max-width:821px)
+{
+    .log
+    {
+     width: 20%;
+    }
+  .links
+  {
+    width: 70%;
+  }
+}
+@media  (max-width:768px)
+{
+    body
+    {
+        overflow: hidden;
+    }
+    
+    .burger
+    {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .burger div
+    {
+        transition: 0.5s all ease;
+    }
+    .log
+    {
+        position: absolute;
+    left: 15px;
+    }
+    .log span h1
+    {
+        font-size: 25px;
+    }
+  .links
+  {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: whitesmoke;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 1s all ease;
+  }
+  .links li a
+  {
+    font-size: 20px;
+    display: flex;
+    font-weight: bolder;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.5s ease;
+  }
+  .links2
+  {
+   transform: translateX(0%);
+   z-index: 9999;
+  }
+  @keyframes alink
+  {
+      from
+      {
+          opacity: 0;
+          transform: translateX(150px);
+      }
+      to
+      {
+          opacity: 1;
+          transform: translateX(0px);
+      }
+  }
+  .toggle .line1
+  {
+      transform:rotate(-45deg)  translate(-5px,6px);
+  }
+  .toggle .line2
+  {
+      opacity: 0;
+  }
+  .toggle .line3
+  {
+      transform: rotate(45deg) translate(-5px,-6px);
+  }
+}

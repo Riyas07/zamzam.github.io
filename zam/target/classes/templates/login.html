@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loginCSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <form onsubmit="return check()" action="authenticate" method="POST">  
+    <div class="from1">
+        <input class="userid" name="username" id="username" type="text" required autocomplete="off"/>
+        <label class="label-name" id="user" for="username">
+            <span class="content-name">
+            <i class="fa fa-fw fa-user"></i>User ID
+            </span>
+        </label>
+                </div>
+    <div class="from1">
+<input class="emails" name="email" id="email" type="email" required autocomplete="off"/>
+<label class="label-name" for="email">
+    <span class="content-name">
+    <i class="fa fa-fw fa-envelope"></i>Email
+    </span>
+</label>
+        </div>
+        <div class="from1">
+            <input class="passwords" name="password" id="password" type="password" required autocomplete="off"/>
+            <label class="label-name" for="password">
+                <span class="content-name">
+                   <i class="fa fa-fw fa-lock"></i>Password
+                </span>
+            </label>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+<a class="create" href="createAccount"><h2>Create Account</h2></a>
+<br><label id="lu" class="lu">UserID Invalid</label> 
+<br> 
+<label id="le" class="le">Email Invalid</label>   
+<br>
+<label id="lp" class="lp">Password Invalid</label>   
+<script src="/loginJS/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    perspective: 1000px;
+}
+.container
+{
+    transform-style: preserve-3d;
+    height: 90vh;
+    width: 30%;
+  background-color: whitesmoke;
+  box-shadow: 0px 20px 20px rgba(0,0,0,0.2),0 0px 50px rgba(0,0,0,0.2);
+}
+.container .card 
+{
+    padding-top: 20px;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.container .card img
+{
+ width: 50%;
+ height: 50%;
+ border-radius: 2rem;
+ transition: 0.5s all ease;
+}
+.container .info
+{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .info h2
+{
+   transition:0.5s all ease ;
+   color: #273c75;
+   font-weight: 2px;
+}
+.container .info h3
+{
+   transition:0.5s all ease ;
+   color: #2d3436;
+}
+.container .info label h4
+{
+   transition:0.5s all ease ;
+   color: #2d3436;
+}
+.btn
+{
+    position: absolute;
+    left: 45px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px 150px;
+    background-color: #e84118;
+    font-family: poppins;
+    letter-spacing: 1px;
+    color: whitesmoke;
+    font-weight: 2px;
+    transition: 0.5s all ease;
+    border-radius: 2rem;
+}
+.btn:hover
+{
+    background-color: #e17055;
+}
+.btn1
+{
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px 150px;
+    background-color: #e84118;
+    font-family: poppins;
+    letter-spacing: 1px;
+    color: whitesmoke;
+    font-weight: 2px;
+    transition: 0.5s all ease;
+    border-radius: 2rem;
+}
+.btn1:hover
+{
+    background-color: #e17055;
+}
